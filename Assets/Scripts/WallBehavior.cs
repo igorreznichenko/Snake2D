@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 namespace Snake {
 	public class WallBehavior : MonoBehaviour
 	{
@@ -14,22 +12,22 @@ namespace Snake {
 			{
 				case "LeftWall":
 					{
-						bodyTransfom.position += Vector3.right * _fieldWidth;
+						bodyTransfom.position += Vector3.right * (_fieldWidth+1);
 						break;
 					}
 				case "RightWall":
 					{
-						bodyTransfom.position += Vector3.left * _fieldWidth;
+						bodyTransfom.position += Vector3.left * (_fieldWidth+1);
 						break;
 					}
 				case "UpWall":
 					{
-						bodyTransfom.position += Vector3.down * _fieldHeight;
+						bodyTransfom.position += Vector3.down * (_fieldHeight+1);
 						break;
 					}
 				case "BottomWall":
 					{
-						bodyTransfom.position += Vector3.up * _fieldHeight;
+						bodyTransfom.position += Vector3.up * (_fieldHeight+1);
 						break;
 					}
 			}
