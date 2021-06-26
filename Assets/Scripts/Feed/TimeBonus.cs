@@ -9,7 +9,8 @@ namespace Snake {
 			base.OnTriggerEnter2D(collision);
 			if(collision.CompareTag("Head"))
 			{
-				_feedSpawner.AddSpawnTime(_bonusTime);
+				TimeBonusInfo bonusInfo = (TimeBonusInfo)_feedInfo;
+				_feedSpawner.AddSpawnTime(bonusInfo.bonusTime);
 				_feedSpawner.UnSpawnBonus();
 			}
 		}

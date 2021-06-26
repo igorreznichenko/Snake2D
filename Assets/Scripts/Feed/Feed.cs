@@ -4,7 +4,7 @@ namespace Snake
 {
 	public class Feed : MonoBehaviour
 	{
-		[SerializeField] protected int _feedScore;
+		[SerializeField] protected FeedInfo _feedInfo;
 		[SerializeField] protected GameObject _particleSystem;
 		protected UIManager _UIManager;
 		protected FeedSpawner _feedSpawner;
@@ -16,7 +16,6 @@ namespace Snake
 			_feedSpawner = FindObjectOfType<FeedSpawner>();
 			_snakeBehavior = FindObjectOfType<SnakeBehavior>();
 			_UIManager = FindObjectOfType<UIManager>();
-			Debug.Log(GetComponentInChildren<ParticleSystem>());
 		}
 
 		protected virtual void OnTriggerEnter2D(Collider2D collision)
@@ -24,7 +23,7 @@ namespace Snake
 			if (collision.CompareTag("Head"))
 			{
 				AudioManager.Instance.FeedPickUp();
-				_UIManager.AddScore(_feedScore);
+				_UIManager.AddScore(_feedInfo.Score);
 				_isAte = true;
 				_particleSystem.SetActive(true);
 				if (tag == "Feed")

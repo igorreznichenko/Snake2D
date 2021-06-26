@@ -4877,7 +4877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2c0b4407e67b64429730370a68e464e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _feedScore: 20
+  _feedInfo: {fileID: 11400000, guid: 1d07f222b5e1aac488f812323f241477, type: 2}
   _particleSystem: {fileID: 5305316968064316898}
   _bonusTime: 5
 --- !u!95 &-6734816225444795484

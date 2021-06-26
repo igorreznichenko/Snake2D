@@ -4877,7 +4877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ef348eb9db1e764b9030f265d38a6d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _feedScore: 20
+  _feedInfo: {fileID: 11400000, guid: 26896944c8cb92942825fb99a16e2302, type: 2}
   _particleSystem: {fileID: 1439915354489869537}
 --- !u!95 &-7644969948766570635
 Animator:
